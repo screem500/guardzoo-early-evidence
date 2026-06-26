@@ -1,0 +1,29 @@
+GuardZoo - Indicators of Compromise
+Source: Lookout 2024-07-09, confirmed live on VirusTotal sample behavior
+
+C2 domains (defanged):
+wwwgoogl[.]zapto[.]org    primary
+somrasdc[.]ddns[.]net     backup
+
+C2 resolved IPs (YemenNet), seen in sample network behavior:
+134.35.5.242
+134.35.9.243
+
+C2 TLS certificate fingerprint (SHA-1, self-signed):
+51a35108b7a2c8d4a199d5c872927ee13d66b4a8
+
+C2 request structure (UID = victim id, Password = auth):
+/getfunctions?UID=...&Password=...
+/get?UID=...&Provider=...&Phone_Number=...&Coordinates=...&Device=...&Sdk=...&Password=...
+/message?UID=...&Password=...&Data=timestamp-status
+
+DEX update URI pattern:
+/updateApp?dexfile=classes.dex
+
+Delivery artifact observed 2022 (trojanized AlpineQuest lure, WhatsApp Business):
+hxxps://www[.]mediafire[.]com/file/91cnzdjccttssmz/Alpin+Quest+Pro2022[.]apk/file
+
+Attacker persona (WhatsApp Business, Yemen):
++967 730 535 076
+
+Sample hashes: see sha256.txt
