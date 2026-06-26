@@ -24,6 +24,6 @@ Delivery artifact observed 2022 (trojanized AlpineQuest lure, WhatsApp Business)
 hxxps://www[.]mediafire[.]com/file/91cnzdjccttssmz/Alpin+Quest+Pro2022[.]apk/file
 
 Attacker persona (WhatsApp Business, Yemen):
-+967 730 535 076
++967 73x xxx xxx
 
 Sample hashes: see sha256.txt
