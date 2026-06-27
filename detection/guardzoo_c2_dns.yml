@@ -1,0 +1,22 @@
+title: GuardZoo C2 DNS Query
+id: fc303ed4-a8a2-4970-8755-dc6c36333c1a
+status: experimental
+description: Detects DNS queries to known GuardZoo command-and-control domains.
+references:
+    - https://www.lookout.com/threat-intelligence/article/guardzoo-houthi-android-surveillanceware
+author: Screem500
+date: 2026/06/28
+logsource:
+    category: dns_query
+detection:
+    selection:
+        QueryName:
+            - 'wwwgoogl.zapto.org'
+            - 'somrasdc.ddns.net'
+    condition: selection
+falsepositives:
+    - Unlikely
+level: high
+tags:
+    - attack.command_and_control
+    - attack.t1071.001
