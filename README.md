@@ -22,9 +22,11 @@ Note: the original APK is no longer retained. The published samples and the live
 
 ### Direct response
 
-A targeted individual, kept anonymous here for their protection, reached out to me for help. I reviewed the messages and the malicious APK, confirmed the delivery was hostile, and took technical and reporting measures against the operator.
+A targeted individual, kept anonymous here for their protection, reached out to me for help. I reviewed the messages and the malicious APK, confirmed the delivery was hostile, and took technical and reporting measures against the operator. As a result, the attacker's accounts were removed from both WhatsApp and Telegram, and the legitimate accounts were successfully restored to their owner. The priority throughout was protecting the targeted person and documenting the activity without exposing them.
 
-As a result, the attacker's accounts were removed from both WhatsApp and Telegram, and the legitimate accounts were successfully restored to their owner. The priority throughout was protecting the targeted person and documenting the activity without exposing them.
+![WhatsApp confrontation and account takedown; the security-code change consistent with the account being restored to its owner](takedown-confrontation.png)
+
+The screenshot above captures the direct confrontation with the operator. The "security code changed" notice that follows is consistent with the legitimate account being restored to its rightful owner on a new device, in line with the outcome described above. This documents the field interaction; it is not in itself a technical attribution.
 
 ## Analysis and confirmation
 
@@ -64,5 +66,5 @@ Field evidence and analysis: Screem500
 
 ## ملخص بالعربية
 
-توثيق لأدلة ميدانية على حملة GuardZoo ، وهي برمجية تجسس أندرويد محسوبة على الحوثيين تستهدف عسكريين في المنطقة. رُصدت الأدلة في 2022، أي قبل الكشف العلني الذي نشرته   Lookout في يوليو 2024 بسنتين. تشمل الأدلة توصيل نسخة مفخخة من تطبيق الخرائط AlpineQuest عبر واتساب بزنس وتيليجرام من رقم يمني. تواصل معي الشخص المستهدف (يبقى مجهول لحمايته) طلباً للمساعدة، واتُّخذت إجراءات تقنية أدّت إلى إزالة حسابات المهاجم من واتساب وتيليجرام، وإعادة الحسابات لأصحابها الشرعيين بنجاح. وتأكدت المؤشرات حيّاً عبر VirusTotal، حيث تتصل العيّنة بنطاق الـ C2 المنشور somrasdc.ddns.net بمعاملات UID وPassword، وبعناوين YemenNet.
-هذا التوثيق دفاعي وبحثي، وأدلة تتقاطع مع مؤشرات منشورة ومؤكّدة، وليست إسناداً قاطعاً لشخص بعينه.
+توثيق لأدلة ميدانية على حملة GuardZoo، وهي برمجية تجسس أندرويد محسوبة على الحوثيين تستهدف عسكريين في المنطقة. رُصدت الأدلة في 2022، أي قبل الكشف العلني الذي نشرته Lookout في يوليو 2024 بسنتين. تشمل الأدلة توصيل نسخة مفخخة من تطبيق الخرائط AlpineQuest عبر واتساب بزنس وتيليجرام من رقم يمني. تواصل معي الشخص المستهدف (يبقى مجهول لحمايته) طلباً للمساعدة، واتُّخذت إجراءات تقنية أدّت إلى إزالة حسابات المهاجم من واتساب وتيليجرام، وإعادة الحسابات لأصحابها الشرعيين بنجاح. وتأكدت المؤشرات حيّاً عبر VirusTotal، حيث تتصل العيّنة بنطاق الـ C2 المنشور somrasdc.ddns.net بمعاملات UID وPassword، وبعناوين YemenNet. هذا التوثيق دفاعي وبحثي، وأدلة تتقاطع مع مؤشرات منشورة ومؤكّدة، وليست إسناداً قاطعاً لشخص بعينه.
+
