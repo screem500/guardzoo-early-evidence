@@ -49,6 +49,17 @@ Machine-readable indicators are in this repository:
 - indicators.txt: C2 domains, resolved YemenNet IPs, TLS certificate fingerprint, C2 request structure, and the delivery artifact
 - sha256.txt: published sample hashes
 
+
+## Detection
+
+Detection rules built on publicly documented GuardZoo characteristics are in the `detection/` folder:
+
+- guardzoo.yar: YARA rule for the malware family (class names, C2 strings, DEX update URI)
+- guardzoo_c2_dns.yml: Sigma rule for DNS queries to the C2 domains
+- guardzoo_c2_proxy.yml: Sigma rule for HTTP requests to the C2 hosts and the DEX update URI
+
+These are heuristic and based on public reporting; tune field names and thresholds to your environment before production use.
+
 The attacker phone number is partially redacted; the country code is retained for attribution.
 
 ## Not to be confused with a separate 2025 campaign
