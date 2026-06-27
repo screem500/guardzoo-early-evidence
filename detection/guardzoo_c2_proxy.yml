@@ -1,0 +1,24 @@
+title: GuardZoo C2 HTTP Request
+id: 41c154a5-bbfa-4df5-9e6a-03836366a45b
+status: experimental
+description: Detects HTTP requests to GuardZoo C2 hosts or the DEX update URI pattern. Proxy field names may need mapping to your environment.
+references:
+    - https://www.lookout.com/threat-intelligence/article/guardzoo-houthi-android-surveillanceware
+author: Screem500
+date: 2026/06/28
+logsource:
+    category: proxy
+detection:
+    selection_host:
+        c-uri-host:
+            - 'wwwgoogl.zapto.org'
+            - 'somrasdc.ddns.net'
+    selection_uri:
+        c-uri|contains: 'updateApp?dexfile=classes.dex'
+    condition: selection_host or selection_uri
+falsepositives:
+    - Unlikely
+level: high
+tags:
+    - attack.command_and_control
+    - attack.t1071.001
