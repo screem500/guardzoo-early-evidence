@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this work in your research or reporting, please cite it using the metadata below."
+type: dataset
+title: "GuardZoo Early Evidence: field evidence and indicators for the GuardZoo Android surveillanceware campaign (Houthi-aligned, Yemen)"
+authors:
+-  name: "Mijlad ALsubaie"
+-  alias: "Screem500"
+-  website: "https://x.com/Al7lhh223"
+identifiers:
+•  type: url
+value: "https://github.com/screem500/guardzoo-early-evidence"
+description: "Project repository"
+repository-code: "https://github.com/screem500/guardzoo-early-evidence"
+url: "https://github.com/screem500/guardzoo-early-evidence"
+license: CC-BY-4.0
+version: "2.0"
+date-released: 2026-06-26
+keywords:
+•  GuardZoo
+•  threat intelligence
+•  Android malware
+•  surveillanceware
+•  indicators of compromise
+•  Yemen
+•  STIX
+•  MISP
+•  MITRE ATT&CK
+•  Dendroid
+abstract: "Early field evidence (January 2022) and machine-readable indicators for the GuardZoo Android surveillanceware campaign, documented nine months before the earliest reported discovery (October 2022) and two and a half years before public disclosure by Lookout (July 2024). Includes STIX 2.1 and MISP exports, MITRE ATT&CK (Mobile) mapping, a campaign timeline, and YARA/Sigma detection rules."
