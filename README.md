@@ -66,6 +66,16 @@ The attacker phone number is partially redacted; the country code is retained fo
 
 A different 2025 campaign reported by Doctor Web also used a trojanized AlpineQuest app, but it targeted Russian military personnel, was distributed via Telegram, and is not attributed to the Houthis. The evidence here concerns GuardZoo, not that campaign.
 
+## Machine-readable exports
+
+- [stix/guardzoo_iocs.json](stix/guardzoo_iocs.json): STIX 2.1 bundle (identity, malware, intrusion-set, 31 indicators, relationships). Regenerate with `python3 generate_exports.py`.
+- [misp/guardzoo_event.json](misp/guardzoo_event.json): MISP event (32 attributes, TLP:CLEAR) ready for import.
+
+## Timeline and ATT&CK mapping
+
+- [timeline.md](timeline.md): campaign chronology combining field evidence (2022) with public reporting.
+- [attack-mapping.md](attack-mapping.md): MITRE ATT&CK (Mobile) technique mapping with evidence sources.
+
 ## Sources
 
 - Lookout Threat Lab, GuardZoo report, 9 July 2024: https://www.lookout.com/threat-intelligence/article/guardzoo-houthi-android-surveillanceware
