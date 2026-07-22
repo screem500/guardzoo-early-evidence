@@ -1,0 +1,260 @@
+{
+  "Event": {
+    "uuid": "b5638312-87cc-52b8-a469-89ddee2e4d8f",
+    "info": "GuardZoo Android surveillanceware - early field evidence and IOCs (Houthi-aligned campaign, Yemen)",
+    "threat_level_id": "2",
+    "analysis": "2",
+    "date": "2026-07-22",
+    "distribution": "3",
+    "published": true,
+    "Orgc": {
+      "name": "Screem500",
+      "uuid": "e9202d1a-c415-5071-b90f-182d41c27063"
+    },
+    "Tag": [
+      {
+        "name": "tlp:clear"
+      },
+      {
+        "name": "misp:tool=\"guardzoo\""
+      },
+      {
+        "name": "android"
+      },
+      {
+        "name": "surveillanceware"
+      },
+      {
+        "name": "yemen"
+      }
+    ],
+    "Attribute": [
+      {
+        "category": "Network activity",
+        "type": "domain",
+        "value": "wwwgoogl.zapto.org",
+        "to_ids": true,
+        "comment": "GuardZoo primary C2 (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Network activity",
+        "type": "domain",
+        "value": "somrasdc.ddns.net",
+        "to_ids": true,
+        "comment": "GuardZoo backup C2; confirmed live on VirusTotal sample behavior"
+      },
+      {
+        "category": "Network activity",
+        "type": "ip-dst",
+        "value": "134.35.5.242",
+        "to_ids": true,
+        "comment": "YemenNet IP contacted by published GuardZoo sample"
+      },
+      {
+        "category": "Network activity",
+        "type": "ip-dst",
+        "value": "134.35.9.243",
+        "to_ids": true,
+        "comment": "YemenNet IP contacted by published GuardZoo sample"
+      },
+      {
+        "category": "Network activity",
+        "type": "x509-fingerprint-sha1",
+        "value": "51a35108b7a2c8d4a199d5c872927ee13d66b4a8",
+        "to_ids": true,
+        "comment": "Self-signed TLS certificate on GuardZoo C2"
+      },
+      {
+        "category": "Network activity",
+        "type": "uri",
+        "value": "/getfunctions",
+        "to_ids": true,
+        "comment": "C2 poll: ?UID=...&Password=..."
+      },
+      {
+        "category": "Network activity",
+        "type": "uri",
+        "value": "/get",
+        "to_ids": true,
+        "comment": "Check-in: ?UID=...&Provider=...&Phone_Number=...&Coordinates=...&Device=...&Sdk=...&Password=..."
+      },
+      {
+        "category": "Network activity",
+        "type": "uri",
+        "value": "/message",
+        "to_ids": true,
+        "comment": "Status report: ?UID=...&Password=...&Data=timestamp-status"
+      },
+      {
+        "category": "Network activity",
+        "type": "uri",
+        "value": "/updateApp?dexfile=classes.dex",
+        "to_ids": true,
+        "comment": "DEX update mechanism (ATT&CK Mobile T1407)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "link",
+        "value": "https://www.mediafire.com/file/91cnzdjccttssmz/Alpin+Quest+Pro2022.apk/file",
+        "to_ids": false,
+        "comment": "2022 delivery artifact: trojanized AlpineQuest lure via WhatsApp Business/Telegram (Yemeni number +967)"
+      },
+      {
+        "category": "Other",
+        "type": "text",
+        "value": "+967 73x xxx xxx",
+        "to_ids": false,
+        "comment": "Attacker persona on WhatsApp Business (Yemen); number partially redacted, country code retained for attribution"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "d34cd64dea64f1e29534f10c7fe3d504d5d7d825c441fd2fb3b81c2cb56c5971",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "bb09cf4023bca6fe8e854626641df398a3ce484236c650d790af83b5990b5408",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "3113eed5c125b4c753f6797e50db3320c907eb80c03a9028286ad1bc1c86fe32",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "54b126aee7055a5160d118b7b9432cac2c75d91df3b7a9d47edb0068191ed8ed",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "1a049acb067200157a338398a71ffe1982dd4bfac22973e57dfca73e4d4123e7",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "7cee417674994a0c1c387d2b3b4af334304a8993e55fc2f688132c1b6860ac6e",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "81538715609924902a292c7c514a2785b319c10153b3ac9aad4961c236e3f3f8",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "e3745acfe7b016fe1782bca43c48e7a3a0f3b948d901ce600192e688aa13e9a5",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "499e04f1ac1380a401f9b38de6cd4a137682fd1ce3557f59ed04cbdf5610b86c",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "1620663c128aa210cea5a8e4f06ecdbedb7b4d4d15c7518771203485cf201808",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "7537132ec47e75ab54c0acb327ae2c4a26dc4ef9c2f62fff2e4d610e998a6abd",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "0fbbf5bca438574f5592ac1f548d5d460ddccb4ad6225087a770b47fb717c427",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "7896090321f7e45882362aaf99b074f74d571ad8147c9f67de453bf2fde4ee60",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "7ab1ddc92532d11b6d292e013f88e862dbf24f182c3cdbe836528e3a559096cc",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "a78251a90a67c766e187fb8978bbd58e981fd635e46935a23ad9ecd86695763a",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "5daac5f8928f6b51a3a6c7dbc18da3d45ca7ae01462d6b405cc2d8aba9ff3a31",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "d6389c46229e036547cec2f05e122b88f08ac1fb61703ee4e7c59544a72ef605",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "f87ef459de739b61a3385f3f5d406d830a77b62aae63db147c0a0fb95b8700cd",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "ccb0c0019be923da82131df1e78897a5cd0d6b88e6d3953f46a70c9d43282af4",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "09ef4ce410a10a5e412c05c9885a1d59192a318e42cb36a2ea6081c26de3126e",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      },
+      {
+        "category": "Payload delivery",
+        "type": "sha256",
+        "value": "893e083bc3cf54b64fa25d2b25443315c832f0e51de788ad79ad8f5f356540d9",
+        "to_ids": true,
+        "comment": "Published GuardZoo sample (Lookout 2024-07-09)"
+      }
+    ],
+    "Object": [],
+    "Galaxy": []
+  }
+}

@@ -1,0 +1,1026 @@
+{
+  "type": "bundle",
+  "id": "bundle--cb2bab9b-5e88-5c42-b06b-95edda452267",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--b6ef7ead-71cb-5f89-9b1d-868c1235e251",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "Screem500",
+      "identity_class": "individual",
+      "description": "Independent security researcher; field evidence collector for the guardzoo-early-evidence repository.",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "is_family": true,
+      "name": "GuardZoo",
+      "aliases": [
+        "trojan.dingwe (VirusTotal popular label)",
+        "Dendroid-derived Android RAT"
+      ],
+      "malware_types": [
+        "spyware",
+        "remote-access-trojan"
+      ],
+      "description": "Android surveillanceware targeting military personnel in the Middle East; based on the leaked Dendroid RAT with a custom ASP.NET C2 backend on IIS. Primary collection objective: GPS and map files (KMZ, WPT, RTE, TRK). Publicly disclosed by Lookout (2024-07-09); field evidence in the guardzoo-early-evidence repository dates to 2022.",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "spec_version": "2.1",
+      "id": "intrusion-set--ef692d3c-d640-586f-87c6-a315aca512f7",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo threat actor (Houthi-aligned, as reported by Lookout)",
+      "description": "Yemeni, Houthi-aligned threat actor attributed to the GuardZoo campaign by Lookout Threat Lab (July 2024). Included here as public-reporting attribution, not independent attribution by this repository.",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f1ded921-b1f0-5e1f-89aa-02542713231b",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo C2 domain (primary): wwwgoogl.zapto.org",
+      "description": "Primary GuardZoo command-and-control domain (Lookout 2024-07-09).",
+      "pattern": "[domain-name:value = 'wwwgoogl.zapto.org']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--53543b9d-862e-5fb2-8f5f-02de36163340",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo C2 domain (backup): somrasdc.ddns.net",
+      "description": "Backup GuardZoo C2 domain; confirmed live contacting YemenNet IPs on VirusTotal sample behavior.",
+      "pattern": "[domain-name:value = 'somrasdc.ddns.net']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1650d11b-8786-5eab-95d0-7cd839f134db",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo C2 IP (YemenNet): 134.35.5.242",
+      "description": "YemenNet IP contacted by published GuardZoo sample.",
+      "pattern": "[ipv4-addr:value = '134.35.5.242']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1bcc33e0-d0c2-57ce-ab2d-0d66ddcb359d",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo C2 IP (YemenNet): 134.35.9.243",
+      "description": "YemenNet IP contacted by published GuardZoo sample.",
+      "pattern": "[ipv4-addr:value = '134.35.9.243']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4ba0ebdc-2c01-5381-9b59-6e1e5475a991",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo C2 self-signed TLS certificate (SHA-1)",
+      "description": "Self-signed TLS certificate fingerprint used by GuardZoo C2.",
+      "pattern": "[x509-certificate:hashes.'SHA-1' = '51a35108b7a2c8d4a199d5c872927ee13d66b4a8']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--04d1a212-1216-5461-80f4-1f6e8ffcf8ba",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo C2 request: function poll",
+      "description": "C2 polling request carrying UID (victim id) and Password (auth) parameters.",
+      "pattern": "[url:value LIKE '%/getfunctions?UID=%']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--6fbc67b7-471a-570e-9666-2f7e882d22ea",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo C2 request: victim registration / check-in",
+      "description": "Check-in request carrying UID, Provider, Phone_Number, Coordinates, Device, Sdk, Password.",
+      "pattern": "[url:value LIKE '%/get?UID=%']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--8f239d70-5612-58d1-ae38-9135ca73ce7b",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo C2 request: status message",
+      "description": "Status reporting request (Data=timestamp-status).",
+      "pattern": "[url:value LIKE '%/message?UID=%']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--870705a8-083d-52d5-b8ba-984f1f8aa28d",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo DEX update URI",
+      "description": "Download-new-code-at-runtime update mechanism (ATT&CK Mobile T1407).",
+      "pattern": "[url:value LIKE '%/updateApp?dexfile=classes.dex%']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--79a2f762-88a4-509b-8e44-45d9401be23c",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo delivery artifact (2022 lure)",
+      "description": "Trojanized AlpineQuest lure delivered over WhatsApp Business/Telegram from a Yemeni number, 2022 field observation.",
+      "pattern": "[url:value = 'https://www.mediafire.com/file/91cnzdjccttssmz/Alpin+Quest+Pro2022.apk/file']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--31bd9518-f921-5890-918f-df4265df708e",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) d34cd64dea64...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = 'd34cd64dea64f1e29534f10c7fe3d504d5d7d825c441fd2fb3b81c2cb56c5971']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--6efad953-6bb5-584f-917c-40fdd4d4ea54",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) bb09cf4023bc...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = 'bb09cf4023bca6fe8e854626641df398a3ce484236c650d790af83b5990b5408']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7908e4fa-23c8-59b8-8b3d-362695a8ce70",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) 3113eed5c125...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = '3113eed5c125b4c753f6797e50db3320c907eb80c03a9028286ad1bc1c86fe32']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d0cc7026-c3e9-590e-8a25-c9e9a6c29359",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) 54b126aee705...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = '54b126aee7055a5160d118b7b9432cac2c75d91df3b7a9d47edb0068191ed8ed']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--cd81013c-79e1-5202-8065-7d8e6a02a446",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) 1a049acb0672...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = '1a049acb067200157a338398a71ffe1982dd4bfac22973e57dfca73e4d4123e7']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--70c11601-2a91-5d99-be8e-6cf38c50dffa",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) 7cee41767499...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = '7cee417674994a0c1c387d2b3b4af334304a8993e55fc2f688132c1b6860ac6e']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a1bb3e81-6087-5726-809f-d474c8fac8d9",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) 815387156099...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = '81538715609924902a292c7c514a2785b319c10153b3ac9aad4961c236e3f3f8']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2ec58178-7aca-5bbe-87d8-f57e31a75f2a",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) e3745acfe7b0...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = 'e3745acfe7b016fe1782bca43c48e7a3a0f3b948d901ce600192e688aa13e9a5']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d54f1889-c687-5eb9-9659-cc16e0b15882",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) 499e04f1ac13...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = '499e04f1ac1380a401f9b38de6cd4a137682fd1ce3557f59ed04cbdf5610b86c']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7d4f62a6-5247-54ab-8230-8a302a499590",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) 1620663c128a...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = '1620663c128aa210cea5a8e4f06ecdbedb7b4d4d15c7518771203485cf201808']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--da5ca375-66d1-5859-b512-87647b6b50a7",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) 7537132ec47e...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = '7537132ec47e75ab54c0acb327ae2c4a26dc4ef9c2f62fff2e4d610e998a6abd']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0801e52b-8d08-5091-af40-29697d9a7ee6",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) 0fbbf5bca438...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = '0fbbf5bca438574f5592ac1f548d5d460ddccb4ad6225087a770b47fb717c427']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e50b70cc-8c88-502e-aabe-358b7741e8a5",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) 7896090321f7...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = '7896090321f7e45882362aaf99b074f74d571ad8147c9f67de453bf2fde4ee60']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c173f829-7d2d-5f79-970b-27a25f1f3641",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) 7ab1ddc92532...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = '7ab1ddc92532d11b6d292e013f88e862dbf24f182c3cdbe836528e3a559096cc']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--315f3a26-ef7b-5053-aa84-5b2f938d1411",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) a78251a90a67...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = 'a78251a90a67c766e187fb8978bbd58e981fd635e46935a23ad9ecd86695763a']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2525c4bb-6d60-5ade-9279-2e992bf18400",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) 5daac5f8928f...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = '5daac5f8928f6b51a3a6c7dbc18da3d45ca7ae01462d6b405cc2d8aba9ff3a31']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b0fd75a7-5e41-5516-b48e-eb397e16b8fb",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) d6389c46229e...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = 'd6389c46229e036547cec2f05e122b88f08ac1fb61703ee4e7c59544a72ef605']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ca002786-c365-5eba-bc50-ea7e4e7d5725",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) f87ef459de73...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = 'f87ef459de739b61a3385f3f5d406d830a77b62aae63db147c0a0fb95b8700cd']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c2a2f5d3-9d60-5690-98f0-7cb2ed7503a2",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) ccb0c0019be9...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = 'ccb0c0019be923da82131df1e78897a5cd0d6b88e6d3953f46a70c9d43282af4']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a43ea815-ec0c-5e99-8683-0514f86456f8",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) 09ef4ce410a1...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = '09ef4ce410a10a5e412c05c9885a1d59192a318e42cb36a2ea6081c26de3126e']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--5a4a9084-3f20-5b96-a051-46657cda8a99",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "name": "GuardZoo sample (SHA-256) 893e083bc3cf...",
+      "description": "Published GuardZoo sample hash (Lookout 2024-07-09), cross-referenced in guardzoo-early-evidence.",
+      "pattern": "[file:hashes.'SHA-256' = '893e083bc3cf54b64fa25d2b25443315c832f0e51de788ad79ad8f5f356540d9']",
+      "pattern_type": "stix",
+      "valid_from": "2026-07-22T00:00:00.000Z",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--74780419-0a58-56fc-8398-c37fe2234d2d",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--f1ded921-b1f0-5e1f-89aa-02542713231b",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3c12e245-6fe6-5bd4-9425-b53ff72e5f97",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--53543b9d-862e-5fb2-8f5f-02de36163340",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--429c5a0f-1f36-5aad-a9c7-1b870bab2045",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--1650d11b-8786-5eab-95d0-7cd839f134db",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7cfccafe-dc59-5e91-ae4c-ab8c8410e2bc",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--1bcc33e0-d0c2-57ce-ab2d-0d66ddcb359d",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cc8e9aeb-8983-527c-a861-97b3f9c3303c",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4ba0ebdc-2c01-5381-9b59-6e1e5475a991",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2e1ec9ef-2c1c-5f72-9078-045a99d85e4f",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--04d1a212-1216-5461-80f4-1f6e8ffcf8ba",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7cef9e96-c635-58a4-b8f3-31930e409320",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--6fbc67b7-471a-570e-9666-2f7e882d22ea",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0aaa7802-6e46-5f9a-9573-9236e99ad206",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--8f239d70-5612-58d1-ae38-9135ca73ce7b",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d3f05b22-bbf3-5b0a-bd5a-221d2480f54a",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--870705a8-083d-52d5-b8ba-984f1f8aa28d",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bc507442-4c34-57fd-84b8-79d60e47f798",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--79a2f762-88a4-509b-8e44-45d9401be23c",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--726443e3-e4dc-59e8-9061-0a6bab061590",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--31bd9518-f921-5890-918f-df4265df708e",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cb76f43f-51e7-504a-9a53-a15a97610d74",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--6efad953-6bb5-584f-917c-40fdd4d4ea54",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--05a26b64-6d46-52e2-9bb1-e6101d7ceaa8",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--7908e4fa-23c8-59b8-8b3d-362695a8ce70",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--831be74a-9615-5bfe-a107-cc153c7877c2",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--d0cc7026-c3e9-590e-8a25-c9e9a6c29359",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--21266cc6-094e-50a2-9176-363e6264b5c0",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--cd81013c-79e1-5202-8065-7d8e6a02a446",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cb8a4544-411a-50f1-84f2-2e1ac197f311",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--70c11601-2a91-5d99-be8e-6cf38c50dffa",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4c35c21f-0a93-5cf9-bc4d-f617460e172c",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a1bb3e81-6087-5726-809f-d474c8fac8d9",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d41b99e6-dbd1-5aa5-8486-d1c9915f707c",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--2ec58178-7aca-5bbe-87d8-f57e31a75f2a",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bbd0f99e-944e-5724-8e16-f5c66c09ecd4",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--d54f1889-c687-5eb9-9659-cc16e0b15882",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e25391cd-ce71-5d82-af34-469ed7fb11bc",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--7d4f62a6-5247-54ab-8230-8a302a499590",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--73a26dd4-eac5-504c-9e6d-45b01052dace",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--da5ca375-66d1-5859-b512-87647b6b50a7",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9ce34ef2-5962-5710-bb2f-b9d19c7e7365",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--0801e52b-8d08-5091-af40-29697d9a7ee6",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--caf15b4b-8aa7-53a4-96e8-08e4c290b6f2",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--e50b70cc-8c88-502e-aabe-358b7741e8a5",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4dbca638-d9dc-5c98-851e-423abca2dbf1",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--c173f829-7d2d-5f79-970b-27a25f1f3641",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8bc2178a-f1b6-52df-a7c0-167bf33b7875",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--315f3a26-ef7b-5053-aa84-5b2f938d1411",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--401d12f9-8f16-5540-b6b8-29a0f7941ece",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--2525c4bb-6d60-5ade-9279-2e992bf18400",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6061e67f-37c5-5c0e-bebd-d46b6210fc13",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b0fd75a7-5e41-5516-b48e-eb397e16b8fb",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b615ba95-c423-561d-92a0-0da2d7dff21e",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ca002786-c365-5eba-bc50-ea7e4e7d5725",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--57c93df8-3bce-5561-a8b6-c94dc816f20b",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--c2a2f5d3-9d60-5690-98f0-7cb2ed7503a2",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5f45ab2a-0028-5bb8-afed-00ab428585fc",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a43ea815-ec0c-5e99-8683-0514f86456f8",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c12a4149-5025-5d4b-9968-1222bc1f179e",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--5a4a9084-3f20-5b96-a051-46657cda8a99",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f1e2f344-f9b8-5dbf-8474-94967f6d3d6a",
+      "created": "2026-07-22T00:00:00.000Z",
+      "modified": "2026-07-22T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--ef692d3c-d640-586f-87c6-a315aca512f7",
+      "target_ref": "malware--e1bf56c9-0cd3-58f2-9c7a-842b20547793",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ]
+    }
+  ]
+}
