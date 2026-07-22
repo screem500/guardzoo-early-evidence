@@ -1,6 +1,6 @@
 # GuardZoo Early Evidence
 
-Field evidence and indicators for the GuardZoo Android surveillanceware campaign (Houthi-aligned, Yemen), documented in 2022 and cross-referenced with the indicators later published by Lookout in July 2024.
+Field evidence and indicators for the GuardZoo Android surveillanceware campaign (Houthi-aligned, Yemen), documented in January 2022 and cross-referenced with the indicators later published by Lookout in July 2024.
 
 For defensive and research purposes only.
 
@@ -8,13 +8,13 @@ For defensive and research purposes only.
 
 GuardZoo is Android surveillanceware that targets military personnel in the Middle East. It was publicly disclosed by Lookout on 9 July 2024 and attributed to a Yemeni, Houthi-aligned threat actor. The campaign has been active since around October 2019. The malware is based on the leaked Dendroid RAT and uses a custom ASP.NET command-and-control backend served on IIS. It is delivered through WhatsApp, WhatsApp Business, Telegram, and direct browser download, mainly using military and mapping-app lures, and its primary collection objective is GPS and map files (KMZ, WPT, RTE, TRK).
 
-## Field observation (2022)
+## Field observation (January 2022)
 
-In 2022, while tracking threats aimed at individuals in the region, I encountered an Android malware operation spreading over messaging apps. What stood out was the lure: a fake topographic mapping and navigation app, framed with military reconnaissance language, delivered as an APK from outside any official app store. That delivery pattern does not match a legitimate app update, so I tracked the sending account and the file and preserved the messages and distribution details. This predated any public naming of the campaign, which Lookout later disclosed in 2024 as GuardZoo.
+In January 2022, while tracking threats aimed at individuals in the region, I encountered an Android malware operation spreading over messaging apps. What stood out was the lure: a fake topographic mapping and navigation app, framed with military reconnaissance language, delivered as an APK from outside any official app store. That delivery pattern does not match a legitimate app update, so I tracked the sending account and the file and preserved the messages and distribution details. This predated the earliest discovery date referenced in public reporting (October 2022) by roughly nine months, and the public naming of the campaign by Lookout in July 2024 by two and a half years.
 
-### Delivery sample (2022)
+### Delivery sample (January 2022)
 
-A trojanized lure was delivered from a Yemeni number over both WhatsApp Business and Telegram, disguised as a paid 2022 update of the AlpineQuest topographic mapping app ("Alpin Quest Pro2022"), hosted as an APK on MediaFire. This matches the GuardZoo pattern precisely: a fake GPS/mapping app is the ideal lure to reach victims who already hold the KMZ/WPT/RTE/TRK files the actor seeks.
+In January 2022, a trojanized lure was delivered from a Yemeni number over both WhatsApp Business and Telegram, disguised as a paid 2022 update of the AlpineQuest topographic mapping app ("Alpin Quest Pro2022"), hosted as an APK on MediaFire. This matches the GuardZoo pattern precisely: a fake GPS/mapping app is the ideal lure to reach victims who already hold the KMZ/WPT/RTE/TRK files the actor seeks.
 
 ![Trojanized AlpineQuest lure delivered over WhatsApp Business and Telegram](alpinequest-delivery.png)
 
@@ -26,7 +26,7 @@ A targeted individual, kept anonymous here for their protection, reached out to 
 
 ![WhatsApp confrontation and account takedown; the security-code change consistent with the account being restored to its owner](takedown-confrontation.png)
 
-The screenshot above captures the direct confrontation with the operator. The "security code changed" notice that follows is consistent with the legitimate account being restored to its rightful owner on a new device, in line with the outcome described above. This documents the field interaction; it is not in itself a technical attribution.
+The screenshot above captures the direct confrontation with the operator on **11 January 2022**. The "security code changed" notice dated **17 January 2022** that follows is consistent with the legitimate account being restored to its rightful owner on a new device, in line with the outcome described above. These dated screenshots document the field interaction; they are not in themselves a technical attribution.
 
 ## Analysis and confirmation
 
@@ -83,10 +83,8 @@ A different 2025 campaign reported by Doctor Web also used a trojanized AlpineQu
 
 ## Credit
 
-Credit
 Field evidence and analysis: Screem500
-•  GitHub: @screem500 https://github.com/screem500
-•  X (Twitter): @Al7lhh223 https://x.com/Al7lhh223
+
 ## ملخص بالعربية
 
 توثيق لأدلة ميدانية على حملة GuardZoo، وهي برمجية تجسس أندرويد محسوبة على الحوثيين تستهدف عسكريين في المنطقة. رُصدت الأدلة في 2022، أي قبل الكشف العلني الذي نشرته Lookout في يوليو 2024 بسنتين. تشمل الأدلة توصيل نسخة مفخخة من تطبيق الخرائط AlpineQuest عبر واتساب بزنس وتيليجرام من رقم يمني. تواصل معي الشخص المستهدف (يبقى مجهول لحمايته) طلباً للمساعدة، واتُّخذت إجراءات تقنية أدّت إلى إزالة حسابات المهاجم من واتساب وتيليجرام، وإعادة الحسابات لأصحابها الشرعيين بنجاح. وتأكدت المؤشرات حيّاً عبر VirusTotal، حيث تتصل العيّنة بنطاق الـ C2 المنشور somrasdc.ddns.net بمعاملات UID وPassword، وبعناوين YemenNet. هذا التوثيق دفاعي وبحثي، وأدلة تتقاطع مع مؤشرات منشورة ومؤكّدة، وليست إسناداً قاطعاً لشخص بعينه.
